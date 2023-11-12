@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/data.css' %}">
+{% endblock app_css %}
+    
+
+{% block header %}
+<h1 style="margin: 60px; color: whitesmoke;">{{heading}}</h1>
+<p style="margin: -70px; color: white;">{{subheading}}</p>
+{% endblock header %}
+    
+
+{% block content-1 %}
+    <div class="row bg-white" style="height: 400px;">
+        <h1>content 1</h1>
+    </div>
+{% endblock content-1 %}
+
+{% block content-2 %}
+    <div class="row bg-secondary" style="height: 400px;">
+        <h1>content 2</h1>
+    </div>
+{% endblock content-2 %}
+
+{% block content-3 %}
+    <div class="row bg-warning" style="height: 400px;">
+        <h1>content 3</h1>
+    </div>
+{% endblock content-3 %}
+    

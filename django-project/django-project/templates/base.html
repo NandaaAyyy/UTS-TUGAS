@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+	  {% include 'snippets/styles.html' %}
+    
+    {% block app_css %}
+    <link rel="stylesheet" href="{% static 'css/data.css' %}">
+    {% endblock app_css %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      
+  </head>
+  <body>
+
+    {% include 'snippets/navbar.html' %}
+
+	<div class="heading text-center">
+		
+        {% block header %}
+            
+        {% endblock header %}
+            
+	</div>
+
+	<div class="container-fluid">
+		<div class="container bg-secondary shadow" style="margin-top: -100px;">			
+            {% block content-1 %}
+            {% endblock content-1 %}              
+		</div>
+		<div class="container bg-warning shadow">			
+            {% block content-2 %}
+            {% endblock content-2 %}              
+		</div>
+		<div class="container bg-white shadow">			
+            {% block content-3 %}
+            {% endblock content-3 %}               
+		</div>
+	</div>
+
+	{% include 'snippets/scripts.html' %}
+
+  <footer>
+    <div style="font-size: 30px;" class="footer-icons">
+      <span class="fw-bold fst-italic">Hubungi Kami : </span>
+        <a style="color: rgb(72, 243, 72);" href="https://wa.link/URL_ANDA"><i class="fab fa-whatsapp"></i></a>
+        <a style="color: rgb(245, 22, 115)" href="https://www.instagram.com/akun_anda"><i class="fab fa-instagram"></i></a>
+        <a style="color: blue;" href="https://www.facebook.com/akun_anda"><i class="fab fa-facebook"></i></a>
+        <a style="color: red;" href="https://www.youtube.com/channel/kanal_anda"><i class="fab fa-youtube"></i></a>
+        <a style="color: rgb(0, 153, 255);" href="https://twitter.com/akun_anda"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+  </body>
+</html>

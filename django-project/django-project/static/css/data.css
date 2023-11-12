@@ -1,0 +1,6 @@
+.heading{
+    background-image: url('/static/img/Header.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
